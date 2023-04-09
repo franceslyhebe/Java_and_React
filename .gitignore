@@ -29,3 +29,8 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+FrontEnd/package-lock.json
+FrontEnd/package.json
+FrontEnd/front/package-lock.json
+FrontEnd/front/package.json
+FrontEnd/front/package.json
