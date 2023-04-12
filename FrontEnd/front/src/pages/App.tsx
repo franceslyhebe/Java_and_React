@@ -1,9 +1,9 @@
-import SignInSide from '../components/login'
+import InitialPage from './InitialPage'
 
 function App() {
 
   return (
-    <SignInSide></SignInSide>
+    <InitialPage/>
   )
 }
 

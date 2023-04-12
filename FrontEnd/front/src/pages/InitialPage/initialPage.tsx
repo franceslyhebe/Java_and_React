@@ -1,5 +1,7 @@
 import { Typography } from "@mui/material"
-import NavBar from "../../components/navbar"
+import NavBar from "../../components/NavBar/navbar"
+import Student from "../../components/Student/student"
+import ListarEstudantes from "../../components/Student/listarEstudantes"
 
 function InitialPage() {
 
@@ -8,7 +10,8 @@ function InitialPage() {
         <>
         <NavBar></NavBar>
         <Typography component="h1" variant="h5">
-        Login
+        <Student/>
+        <ListarEstudantes/>
       </Typography>
       </>
     )
