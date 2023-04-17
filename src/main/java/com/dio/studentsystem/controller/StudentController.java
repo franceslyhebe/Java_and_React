@@ -2,8 +2,18 @@ package com.dio.studentsystem.controller;
 
 import com.dio.studentsystem.model.Student;
 import com.dio.studentsystem.service.StudentService;
-import java.util.List;import java.util.NoSuchElementException;import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;import org.springframework.http.ResponseEntity;import org.springframework.web.bind.annotation.DeleteMapping;import org.springframework.web.bind.annotation.GetMapping;import org.springframework.web.bind.annotation.PathVariable;import org.springframework.web.bind.annotation.PostMapping;import org.springframework.web.bind.annotation.PutMapping;import org.springframework.web.bind.annotation.RequestBody;import org.springframework.web.bind.annotation.RequestMapping;
+import java.util.List;
+import java.util.NoSuchElementException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -28,10 +38,10 @@ public class StudentController {
     public ResponseEntity<Student> getById(@PathVariable Integer id){
         try{
             Student student = studentService.getById(id);
-            return new ResponseEntity<Student>(student, HttpStatus.OK);
+      return new ResponseEntity<>(student, HttpStatus.OK);
 
         }catch(NoSuchElementException e){
-            return new ResponseEntity<Student>(HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
     @PutMapping("/update/{id}")
@@ -45,7 +55,7 @@ public class StudentController {
 
             return new ResponseEntity<>(HttpStatus.OK);
         }catch( NoSuchElementException e){
-            return new ResponseEntity<Student>(HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
     @DeleteMapping("/{id}")
